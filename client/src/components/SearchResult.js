@@ -1,4 +1,4 @@
-import { Button, CardDeck, Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
+import { Button, Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
 import API from "../utils/API";
 
 function SearchResult({ book }) {

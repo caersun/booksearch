@@ -1,12 +1,9 @@
 import { Button, Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap";
 import API from "../utils/API";
-// import Saved from "../pages/Saved";
 
-function SavedBook({ book, loadSaved }) {
-       // TODO: Refreshes but the not the current, the previous?
+function SavedBook({ book }) {
     const deleteBook = () => {
-        API.deleteBook(book._id)
-            .then(loadSaved());
+        API.deleteBook(book._id).then(window.location.reload());
     };
 
     return <Card>
