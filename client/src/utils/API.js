@@ -2,7 +2,9 @@ import axios from "axios";
 
 const API = {
     searchBook: (query) => {
-        return axios.get("https://www.googleapis.com/books/v1/volumes?q=" + query);
+        const url = "https://www.googleapis.com/books/v1/volumes?q=" + query;
+        console.log("searching url:", url);
+        return axios.get(url);
     },
     getSavedBooks: () => {
         return axios.get("/api/books");
