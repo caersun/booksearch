@@ -15,7 +15,6 @@ if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
 };
 
-// TODO: define API routes
 app.use(routes);
 
 // connect to MongoDB
