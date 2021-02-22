@@ -18,7 +18,7 @@ module.exports = {
     create: (req, res) => {
         db.Book.create(req.body)
             .then(dbModel => res.json(dbModel))
-            .catch(err => res.status(422).json(err));
+            .catch(err => res.json(err)); //.status(422)
     },
     // update
     update: (req, res) => {
