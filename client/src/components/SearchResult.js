@@ -16,7 +16,7 @@ function SearchResult({ book }) {
             .then(res => console.log("after API.saveBook in then res", res))
             .catch(err => console.log(err));
         console.log("in saveBook, after API");
-        API.getSavedBooks().then(saved => console.log("saved", saved));
+        API.getSavedBooks().then(saved => console.log("saved", saved)).catch(err => console.log(err));
     };
 
     return <Card>
