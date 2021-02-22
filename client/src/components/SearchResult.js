@@ -12,7 +12,10 @@ function SearchResult({ book }) {
             description: book.volumeInfo.description,
             image: book.volumeInfo.imageLinks.thumbnail,
             link: book.volumeInfo.previewLink
-        });
+        })
+            .then(res => console.log("after API.saveBook in then res", res))
+            .catch(err => console.log(err));
+        console.log("in saveBook, after API");
         API.getSavedBooks().then(saved => console.log("saved", saved));
     };
 
