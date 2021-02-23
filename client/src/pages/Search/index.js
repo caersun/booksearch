@@ -28,6 +28,7 @@ function Search() {
                 <h6>Results</h6>
                 {books.length ? (
                     books.map((book, key) => { 
+                        // console.log("in Search page ~ in results ~ book", book);
                         return <SearchResult key={key} book={book} /> 
                     })) : (
                     <h3>No results to display</h3>
