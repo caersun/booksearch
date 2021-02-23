@@ -10,9 +10,9 @@ const routes = require("./routes");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "client/build/index.html"));
-});
+// app.get("/", (req, res) => {
+//     res.sendFile(path.join(__dirname, "client/build/index.html"));
+// });
 
 // serve static assets in production
 if (process.env.NODE_ENV === "production") {
@@ -22,7 +22,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(routes);
 
 // connect to MongoDB
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/booksearch", {
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/googlebooks', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
